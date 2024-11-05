@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 50px;
+    background-color: beige;
+}
+
+#emailList {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+

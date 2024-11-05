@@ -3,7 +3,7 @@ console.log('Email List');
 function generateEmails() {
     // Elemento DOM
     const emailList = document.getElementById('email-list');
-    emailList.innerHTML = ''; 
+    emailList.innerHTML = '';
 
     // Array per memorizzare le richieste API
     const listEmails = [];
@@ -21,13 +21,14 @@ function generateEmails() {
             res.forEach((res) => {
                 const email = res.data.response;
                 console.log(email);
-                
-                
+
+
                 // Crea un elemento <li> per ogni email
                 const listItem = document.createElement('li');
                 listItem.textContent = email;
                 // Aggiunge l'elemento alla lista
                 emailList.appendChild(listItem);
+                listItem.classList.add('list-group-item');
             });
         })
         .catch((err) => {
@@ -36,6 +37,11 @@ function generateEmails() {
 }
 
 generateEmails();
+
+const myBtn = document.getElementById('generate-btn')
+myBtn.addEventListener('click', generateEmails);
+
+
 
 
 

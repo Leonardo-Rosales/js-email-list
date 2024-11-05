@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Email List</title>
 </head>
+
 <body>
-    <h1>Email List</h1>
-    <ul id="email-list"></ul>
+
+    <div class="container d-flex flex-column align-items-center">
+        <h1 class="text-center mb-4 text-warning">Lista di Email Casuali</h1>
+
+        <button id="generate-btn" class="btn btn-success mb-4">Genera 10 Nuove Email</button>
+
+        <ul id="email-list" class="list-group"></ul>
+    </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
